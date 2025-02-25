@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Blog Post</title>
+    <link rel="stylesheet" href="add-blog.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f7fc;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background-color: #00695c;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .header nav ul li {
+            margin: 0 15px;
+        }
+
+        .header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 5px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .header nav ul li a:hover {
+            background-color: #004d40;
+        }
+
+        .form-section {
+            padding: 60px 0;
+            background-color: #fff;
+            margin-top: 40px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .form-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+        }
+
+        .blog-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #00695c;
+            background-color: #e8f5e9;
+        }
+
+        .submit-btn {
+            background-color: #00695c;
+            color: #fff;
+            padding: 14px 20px;
+            font-size: 1.2rem;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #004d40;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Add New Blog Post</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/reading-blog">Read Blogs</a></li>
+                  
+                </ul>
+            </nav>
+        </div>
+    </header>
+       
+    <section class="form-section">
+        <div class="container">
+            <h2>Write Your Blog Post</h2>
+            <form action="/add-blog" method="POST" class="blog-form">
+                <div class="form-group">
+                    <label for="title">Blog Title</label>
+                    <input type="text" id="title" name="title" placeholder="Enter your blog title" required>
+                </div>
+                <div class="form-group">
+                    <label for="content">Content</label>
+                    <textarea id="content" name="content" rows="6" placeholder="Write your blog content here..."
+                        required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="tags">Tags (separate with commas)</label>
+                    <input type="text" id="tags" name="tags" placeholder="Enter tags (e.g., travel, technology)"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="tags">Add Image Url</label>
+                    <input type="text" id="tags" name="image_url" placeholder="Add Image of your blog"
+                        required>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="submit-btn">Publish Blog</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Blog Application. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
+        
